@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "printomat-drf"
+name = "restaurant"
 version = "0.1.0"
 description = ""
 authors = ["Blazej Bielski <bbielski@lyck.pl>"]
 readme = "README.md"
-packages = [{include = "printomat_drf"}]
+packages = [{include = "restaurant"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"

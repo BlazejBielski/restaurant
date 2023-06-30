@@ -203,3 +203,5 @@ DEBUG_TOOLBAR_PANELS = [
     "debug_toolbar.panels.redirects.RedirectsPanel",
     "debug_toolbar.panels.profiling.ProfilingPanel",
 ]
+
+AUTH_USER_MODEL = 'users.CustomUser'
