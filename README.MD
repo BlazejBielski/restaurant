@@ -1,1 +1,1 @@
-# Printomat DRF
+# Restaurant Project
