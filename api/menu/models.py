@@ -3,8 +3,8 @@ from utilities.timestamp_model import TimeStampModel
 
 
 class ProductImage(models.Model):
-    image = models.ImageField(upload_to="products")
-    product = models.ForeignKey("Dish", on_delete=models.CASCADE, related_name="images")
+    image = models.ImageField(upload_to="dishes/")
+    dish = models.ForeignKey("Dish", on_delete=models.CASCADE, related_name="images")
 
 
 class Category(TimeStampModel):

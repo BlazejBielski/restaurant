@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "rest_framework_simplejwt",
     "rest_framework_simplejwt.token_blacklist",
+    "drf_spectacular",
     # local app
     "users.apps.UsersConfig",
     "menu.apps.MenuConfig",
@@ -150,6 +151,7 @@ REST_FRAMEWORK = {
     "DEFAULT_PARSER_CLASSES": [
         "rest_framework.parsers.JSONParser",
     ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 # Simple JWT
@@ -205,9 +207,15 @@ DEBUG_TOOLBAR_PANELS = [
     "debug_toolbar.panels.profiling.ProfilingPanel",
 ]
 
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Restaurant API",
+    "DESCRIPTION": "API for restaurant app",
+    "VERSION": "1.0.0",
+}
+
 AUTH_USER_MODEL = 'users.CustomUser'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = 'media'
+MEDIA_URL = 'media/'
 
 IMAGES_TYPES = ['jpeg', 'png']
