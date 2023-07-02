@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt.token_blacklist",
     # local app
     "users.apps.UsersConfig",
+    "menu.apps.MenuConfig",
 ]
 
 MIDDLEWARE = [
