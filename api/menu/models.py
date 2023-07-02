@@ -3,7 +3,7 @@ from utilities.timestamp_model import TimeStampModel
 
 
 class ProductImage(models.Model):
-    image = models.ImageField(upload_to="product_image")
+    image = models.ImageField(upload_to="products")
     product = models.ForeignKey("Dish", on_delete=models.CASCADE, related_name="images")
 
 
@@ -12,6 +12,10 @@ class Category(TimeStampModel):
 
     def __str__(self):
         return str(self.name)
+
+    class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"
 
 
 class Dish(TimeStampModel):
@@ -22,3 +26,7 @@ class Dish(TimeStampModel):
 
     def __str__(self):
         return str(self.name)
+
+    class Meta:
+        verbose_name = "Dish"
+        verbose_name_plural = "Dishes"
